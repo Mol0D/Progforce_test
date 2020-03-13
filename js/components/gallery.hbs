@@ -1,0 +1,92 @@
+
+
+<div class="gallery">
+    <div class="gallery__title">Movies Gallery</div>
+    <button id="lol">b</button>
+
+    <div class="gallery__film">
+        {{#each data}}
+            <div class="galley__film-item">
+                <div class="film__star" id="star" >
+                    <span class="film__star-item">☆</span>
+                </div>
+                <img src="{{this.img}}" alt="film" class="film__image">
+                <p class="film__name">{{this.name}}</p>
+                <p class="film__year">{{this.year}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+
+
+<style>
+    .gallery {
+        flex-basis: 80%;
+        min-height: 100vh;
+    }
+
+    .gallery__title {
+        margin: 10px 0;
+        color: #FFA726;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .gallery__film {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 40px;
+    }
+
+    .galley__film-item {
+        position: relative;
+        flex-basis: 27%;
+        max-width: 342px;
+        background-color: #E0E0E0;
+        border-radius: 7px;
+        text-align: center;
+        margin: 15px 8px;
+    }
+
+    .film__image {
+        /*margin: 5px;*/
+        width: 342px;
+        height: 443px;
+        background-size: contain;
+    }
+
+    .film__name {
+        font-weight: 600;
+        font-size: 24px;
+        padding: 5px 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .film__year {
+        font-style: italic;
+        padding-bottom: 10px;
+    }
+
+    .film__star {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        font-size: 40px;
+        width: 32px;
+        height: 32px;
+        background-color: #FFA726;
+        border-radius: 50%;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .film__star-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>

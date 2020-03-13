@@ -1,0 +1,63 @@
+<div class="favorite">
+    <div class="favorite__title">
+        <span class="favorite__title__star">☆</span>
+        Favorite
+    </div>
+
+    <div class="favorite__box">
+        <div class="favorite__item">
+            <span>-></span>
+            <p>movie1</p>
+            <span class="favorite__item__close"></span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .favorite {
+        flex-basis: 20%;
+        background-color: #EEEEEE;
+    }
+
+    .favorite__title {
+        position: relative;
+        margin: 10px 25px;
+        color: #F57C00;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .favorite__title__star {
+        position: absolute;
+        left: 0;
+    }
+
+    .favorite__box {
+        margin: 0 50px;
+    }
+
+    .favorite__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .favorite__item__close {
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: #f44336;
+        transform: rotate(45deg);
+    }
+
+    .favorite__item__close:before {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: #f44336;
+        transform: rotate(-90deg);
+    }
+</style>
